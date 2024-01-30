@@ -1,14 +1,14 @@
 enum ColorsPalette {
-    red = '#FF0000', // Classic Uno red
-    yellow = '#FFFF00', // Bright yellow
-    green = '#008000', // Uno green
-    blue = '#0000FF', // Uno blue
-    lightRed = '#FF6666', // Lighter shade of red
-    lightYellow = '#FFFF99', // Lighter shade of yellow
-    lightGreen = '#66FF66', // Lighter shade of green
-    lightBlue = '#6699FF', // Lighter shade of blue
-    actionBlack = '#000000', // Black for action cards
-    white = '#FFFFFF', // White for text or designs
+    red = 'red', // Classic Uno red
+    yellow = 'yellow', // Bright yellow
+    green = 'green', // Uno green
+    blue = 'blue', // Uno blue
+    lightRed = 'lightRed', // Lighter shade of red
+    lightYellow = 'lightYellow', // Lighter shade of yellow
+    lightGreen = 'lightGreen', // Lighter shade of green
+    lightBlue = 'lightBlue', // Lighter shade of blue
+    actionBlack = 'actionBlack', // Black for action cards
+    white = 'white', // White for text or designs
     transparent = 'transparent', // Transparent for special cases
 }
 

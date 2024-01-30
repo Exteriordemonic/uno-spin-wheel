@@ -1,6 +1,6 @@
 import { merge } from 'webpack-merge';  
 
-import { devServer, loadTS, loadCSS } from "./webpack.parts.js";
+import { devServer, loadTS, loadCSS, loadAssets } from "./webpack.parts.js";
 
 
 export default merge([
@@ -11,4 +11,5 @@ export default merge([
     }),
     loadTS(),
     loadCSS(),
+    loadAssets(),
 ]);
