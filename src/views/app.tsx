@@ -16,38 +16,48 @@ const demoItems:WedgeLabelProps[] = [
     fill: ColorsPalette.black,
     rotation: 0,
     height: 0,
-    default: true
+    default: true,
+    active: true,
   },
   {
     label: 'Drop all expect 2',
     fill: ColorsPalette.yellow,
     rotation: 0,
     height: 0,
-    default: true
+    default: true,
+    active: true,
   },
   {
     label: 'Show Your cards',
     fill: ColorsPalette.black,
     rotation: 0,
     height: 0,
+    default: true,
+    active: true,
   },
   {
     label: 'Uno Spin',
     fill: ColorsPalette.green,
     rotation: 0,
     height: 0,
+    default: true,
+    active: true,
   },
   {
     label: 'Swtich Cards',
     fill: ColorsPalette.black,
     rotation: 0,
     height: 0,
+    default: true,
+    active: true,
   },
   {
     label: 'Put all blue cards',
     fill: ColorsPalette.blue,
     rotation: 0,
     height: 0,
+    default: true,
+    active: true,
   },
   // {
   //   label: 'Label 3',
@@ -74,7 +84,7 @@ function App() {
       </header>
 
       <Wheal items={items} />
-      <SettingsModal open={openSettings} setOpen={setOpenSettings} items={items} />
+      <SettingsModal open={openSettings} setOpen={setOpenSettings} items={items} setItems={setItems}/>
     </div> 
   );
 }

@@ -1,10 +1,11 @@
 import React from 'react';
 import ModalHeader from '../../components/modal-header';
 import LabelList from '../../components/label-list';
-import { WedgeLabelProps } from '../../components/wedge-label/types';
+import { SettingModalPropsType } from './types';
 
+const SettingsModal = (props: SettingModalPropsType) => {
 
-const SettingsModal = ({ open, setOpen, items }: { open: boolean, setOpen: Function, items:WedgeLabelProps[] }) => {
+    const { open, setOpen, items } = props;
 
     const handleModalClose = () => {
         setOpen(false);
