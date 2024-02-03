@@ -8,6 +8,7 @@ import { ButtonType } from '../components/button/types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGear } from '@fortawesome/free-solid-svg-icons'
 import SettingsModal from '../containers/settings-modal';
+import { v4 as uuidv4 } from 'uuid';
 
 
 const demoItems:WedgeLabelProps[] = [
@@ -18,6 +19,7 @@ const demoItems:WedgeLabelProps[] = [
     height: 0,
     default: true,
     active: true,
+    id: uuidv4(),
   },
   {
     label: 'Drop all expect 2',
@@ -26,6 +28,7 @@ const demoItems:WedgeLabelProps[] = [
     height: 0,
     default: true,
     active: true,
+    id: uuidv4(),
   },
   {
     label: 'Show Your cards',
@@ -34,6 +37,7 @@ const demoItems:WedgeLabelProps[] = [
     height: 0,
     default: true,
     active: true,
+    id: uuidv4(),
   },
   {
     label: 'Uno Spin',
@@ -42,6 +46,7 @@ const demoItems:WedgeLabelProps[] = [
     height: 0,
     default: true,
     active: true,
+    id: uuidv4(),
   },
   {
     label: 'Swtich Cards',
@@ -50,6 +55,7 @@ const demoItems:WedgeLabelProps[] = [
     height: 0,
     default: true,
     active: true,
+    id: uuidv4(),
   },
   {
     label: 'Put all blue cards',
@@ -58,6 +64,7 @@ const demoItems:WedgeLabelProps[] = [
     height: 0,
     default: true,
     active: true,
+    id: uuidv4(),
   },
   // {
   //   label: 'Label 3',

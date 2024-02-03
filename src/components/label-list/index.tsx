@@ -1,16 +1,16 @@
 import React from 'react';
-import { WedgeLabelProps } from '../wedge-label/types';
 import Label from '../label';
+import { LabelListPropsType } from './types';
 
-const LabelList = ({ items }: { items: WedgeLabelProps[] }) => {
+const LabelList = (props:LabelListPropsType) => {
+    const { items, handleLabelClick } = props;
     return (
         <ul className="my-4 space-y-3">
             {items.map((item, index) => (
                 <li key={index}>
-                    <Label label={item.label} default={item.default} />
+                    <Label handleLabelClick={handleLabelClick} item={item} />
                 </li>
             ))}
-
         </ul>
     );
 };
