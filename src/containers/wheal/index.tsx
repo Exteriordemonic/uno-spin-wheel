@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import WedgeLabel from "../../components/wedge-label";
 import CaclWedeSize from "../../utils/CalcWedgeSize";
 import Logo from "../../components/logo";
-import PointerElement from "../../components/PointerElement";
+import PointerElement from "../../components/pointer-element";
 import { MouseEvent } from "./types";
 import { random } from "node-forge";
 import RandomMultiply from "../../utils/RandomMultiply";

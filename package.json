@@ -24,6 +24,7 @@
   "author": "Kamil Mirosz",
   "license": "MIT",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "autoprefixer": "^10.0.0",
     "postcss": "^8.0.0",
     "react-dom": "^18.0.0",
@@ -34,6 +35,8 @@
     "webpack-dev-server": "^4.15.1"
   },
   "devDependencies": {
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@types/node": "^14.0.0",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
