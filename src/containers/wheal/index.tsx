@@ -22,10 +22,6 @@ const Wheal = (props: WhealProps) => {
     const [allowDragging, setAllowDragging] = useState(true);
     const [engine] = useState(new MouseMoveEngine());
 
-    let timer = setTimeout(() => {
-        
-    }, 0);
-
     const handleDragStart = (e: object) => {
         setDragging(true);
     };
@@ -75,6 +71,10 @@ const Wheal = (props: WhealProps) => {
         setRotate(newRotate);
 
     }, [distance]);
+
+    useEffect(() => {
+        setHeight(CaclWedeSize(0.80, items.length));
+    }, [items]);
 
     return (
         <div className="flex bg-gray-900 h-screen items-center justify-center overflow-hidden">
