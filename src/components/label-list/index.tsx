@@ -1,9 +1,10 @@
 import React from 'react';
 import Label from '../label';
 import { LabelListPropsType } from './types';
+import NewLabelInput from '../new-label-input';
 
-const LabelList = (props:LabelListPropsType) => {
-    const { items, handleLabelClick } = props;
+const LabelList = (props: LabelListPropsType) => {
+    const { items, handleLabelClick, handleAddLabel } = props;
     return (
         <ul className="my-4 space-y-3">
             {items.map((item, index) => (
@@ -11,6 +12,9 @@ const LabelList = (props:LabelListPropsType) => {
                     <Label handleLabelClick={handleLabelClick} item={item} />
                 </li>
             ))}
+            <li>
+                <NewLabelInput handleAddLabel={handleAddLabel} />
+            </li>
         </ul>
     );
 };
