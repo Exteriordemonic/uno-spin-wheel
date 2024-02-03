@@ -21,6 +21,7 @@ const WedgeLabel = (props: WedgeLabelProps) => {
         justify-center
         items-center
         text-xl
+        pointer-events-none
       `}
       style={{
         rotate: `${rotation}deg`,
