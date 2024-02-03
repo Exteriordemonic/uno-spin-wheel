@@ -83,6 +83,12 @@ const demoItems:WedgeLabelProps[] = [
 function App() {
   const [items, setItems] = useState([...demoItems]);
   const [openSettings, setOpenSettings] = useState(true);
+  const [activeItems, setActiveItems] = useState([...items]);
+
+  useEffect(() => {
+    const activeItems = items.filter((item) => item.active);
+    setActiveItems(activeItems);
+  }, [items]);
 
   return (
     <div className="App"> 
@@ -90,7 +96,7 @@ function App() {
         <Button type={ButtonType.icon} onClick={() => setOpenSettings(true)}><FontAwesomeIcon icon={faGear} /></Button>
       </header>
 
-      <Wheal items={items} />
+      <Wheal items={activeItems} />
       <SettingsModal open={openSettings} setOpen={setOpenSettings} items={items} setItems={setItems}/>
     </div> 
   );
