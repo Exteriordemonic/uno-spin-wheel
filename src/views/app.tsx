@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGear } from '@fortawesome/free-solid-svg-icons'
 import SettingsModal from '../containers/settings-modal';
 import { v4 as uuidv4 } from 'uuid';
+import StorageFactory, { StorageKey, StorageType } from '../services/StorageFactory';
 
 
 const demoItems:WedgeLabelProps[] = [
@@ -86,9 +87,20 @@ function App() {
   const [activeItems, setActiveItems] = useState([...items]);
 
   useEffect(() => {
+    StorageFactory.getFrom(StorageType.local, StorageKey.items).then((items: WedgeLabelProps[]) => {
+      if (items) {
+        setItems(items);
+      }
+    });
+  }, []);
+
+  useEffect(() => {
     const activeItems = items.filter((item) => item.active);
     setActiveItems(activeItems);
+
+    StorageFactory.set(StorageType.local, StorageKey.items, items);
   }, [items]);
+
 
   return (
     <div className="App"> 
