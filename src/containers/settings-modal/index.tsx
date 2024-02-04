@@ -25,6 +25,19 @@ const SettingsModal = (props: SettingModalPropsType) => {
         setItems(newItems);
     }
 
+    const handleLabelChange = (id: string, value: string): void => {
+
+        const newItems = [...items];
+
+        newItems.forEach((item) => {
+            if (item.id === id) {
+                item.label = value;
+            }
+        });
+
+        setItems(newItems);
+    }
+
     const handleRemoveClick = (id: string): void => {
 
         const newItems = [...items];
@@ -46,7 +59,7 @@ const SettingsModal = (props: SettingModalPropsType) => {
                     <ModalHeader handleClick={handleModalClose} title='Settings' />
                     <div className="p-4 md:p-5">
                         <p className="text-sm font-normal text-gray-500 dark:text-gray-400">Menage and create custom labels for your game</p>
-                        <LabelList items={items} handleLabelClick={handleLabelClick} handleRemoveClick={handleRemoveClick} handleAddLabel={handleAddLabel} />
+                        <LabelList items={items} handleLabelClick={handleLabelClick} handleRemoveClick={handleRemoveClick} handleAddLabel={handleAddLabel} handleLabelChange={handleLabelChange} />
                         <div className='text-sm font-normal text-gray-500 dark:text-gray-400'>
                             Data will be stored inside your local storage
                         </div>
