@@ -6,7 +6,7 @@ export enum ButtonType {
 export type ButtonPropsType = {
     children: React.ReactNode,
     type: ButtonType,
-    onClick: () => void,
+    onClick: (event: React.MouseEvent<HTMLElement> | null) => void,
 };
 
 export type ButtonClassListType = {
