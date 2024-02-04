@@ -67,18 +67,6 @@ const demoItems:WedgeLabelProps[] = [
     active: true,
     id: uuidv4(),
   },
-  // {
-  //   label: 'Label 3',
-  //   fill: ColorsPalette.lightGreen,
-  //   rotation: 0,
-  //   height: 0,
-  // },
-  // {
-  //   label: 'Label 4',
-  //   fill: ColorsPalette.lightGreen,
-  //   rotation: 0,
-  //   height: 0,
-  // }
 ]
 
 function App() {
