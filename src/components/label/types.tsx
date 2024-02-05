@@ -5,4 +5,5 @@ export type LabelPropsType = {
     handleLabelClick: (id: string) => void
     handleRemoveClick: (id: string) => void
     handleLabelChange: (id: string, value: string) => void
+    handleColorChange: (id: string, value: string) => void
 }
