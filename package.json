@@ -24,6 +24,7 @@
   "author": "Kamil Mirosz",
   "license": "MIT",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "autoprefixer": "^10.0.0",
     "postcss": "^8.0.0",
     "react-dom": "^18.0.0",
@@ -34,17 +35,23 @@
     "webpack-dev-server": "^4.15.1"
   },
   "devDependencies": {
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@types/node": "^14.0.0",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
+    "@types/uuid": "^9.0.8",
     "css-loader": "^5.0.0",
     "dotenv": "^16.4.1",
     "eslint-webpack-plugin": "^4.0.1",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.6.0",
+    "install": "^0.13.0",
+    "npm": "^10.4.0",
     "postcss-loader": "^4.0.0",
     "react": "^18.2.0",
     "style-loader": "^2.0.0",
-    "ts-loader": "^8.0.0"
+    "ts-loader": "^8.0.0",
+    "uuid": "^9.0.1"
   }
 }

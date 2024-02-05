@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import WedgeLabel from "../../components/wedge-label";
 import CaclWedeSize from "../../utils/CalcWedgeSize";
 import Logo from "../../components/logo";
-import PointerElement from "../../components/PointerElement";
+import PointerElement from "../../components/pointer-element";
 import { MouseEvent } from "./types";
 import { random } from "node-forge";
 import RandomMultiply from "../../utils/RandomMultiply";
@@ -21,10 +21,6 @@ const Wheal = (props: WhealProps) => {
     const [distance, setDistance] = useState(0);
     const [allowDragging, setAllowDragging] = useState(true);
     const [engine] = useState(new MouseMoveEngine());
-
-    let timer = setTimeout(() => {
-        
-    }, 0);
 
     const handleDragStart = (e: object) => {
         setDragging(true);
@@ -75,6 +71,10 @@ const Wheal = (props: WhealProps) => {
         setRotate(newRotate);
 
     }, [distance]);
+
+    useEffect(() => {
+        setHeight(CaclWedeSize(0.80, items.length));
+    }, [items]);
 
     return (
         <div className="flex bg-gray-900 h-screen items-center justify-center overflow-hidden">

@@ -10,6 +10,7 @@ enum ColorsPalette {
     actionBlack = 'actionBlack', // Black for action cards
     white = 'white', // White for text or designs
     transparent = 'transparent', // Transparent for special cases
+    black = 'black', // Transparent for special cases
 }
 
 export default ColorsPalette;
